@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mardiyanto — Human Resources portfolio featuring HR projects, certifications, operational achievements, HRIS skills, recruitment, manpower planning, and performance management." />
+  <meta name="theme-color" content="#0B1736" />
+
+  <title>Mardiyanto | Human Resources Portfolio</title>
+
+  <!-- Premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    /* EDIT-COLOR: Change the main portfolio palette here */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B1736',
+            ink2: '#15264D',
+            ivory: '#F7F4EC',
+            paper: '#FCFBF7',
+            gold: '#C49A44',
+            gold2: '#D8B766',
+            mist: '#E9EDF3'
+          },
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            serif: ['DM Serif Display', 'serif']
+          },
+          boxShadow: {
+            premium: '0 24px 80px rgba(11,23,54,.12)',
+            card: '0 14px 40px rgba(11,23,54,.08)',
+            gold: '0 12px 32px rgba(196,154,68,.20)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-padding-top: 90px; }
+    body { overflow-x: hidden; }
+    .grain {
+      background-image:
+        radial-gradient(rgba(11,23,54,.045) 0.7px, transparent 0.7px);
+      background-size: 10px 10px;
+    }
+    .gold-line {
+      background: linear-gradient(90deg, transparent, #C49A44, transparent);
+      height: 1px;
+    }
+    .hero-glow {
+      background:
+        radial-gradient(circle at 72% 20%, rgba(216,183,102,.30), transparent 26%),
+        radial-gradient(circle at 15% 75%, rgba(80,105,158,.18), transparent 30%);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .premium-card {
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    }
+    .premium-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 22px 54px rgba(11,23,54,.12);
+      border-color: rgba(196,154,68,.45);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 1px;
+      background: #C49A44;
+      transition: width .25s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .premium-card, .nav-link::after { transition: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-paper font-sans text-slate-700 antialiased selection:bg-gold/20 selection:text-ink">
+
+  <!-- =========================================================
+       EASY EDIT GUIDE
+       Search "EDIT-" inside this file using Acode / VS Code.
+       ========================================================= -->
+
+  <!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/70 bg-paper/90 backdrop-blur-xl">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Main Navigation">
+
+      <!-- EDIT-NAME -->
+      <a href="#home" class="flex items-center gap-3">
+        <span class="grid h-10 w-10 place-items-center rounded-full bg-ink text-sm font-extrabold tracking-wide text-white shadow-card">M</span>
+        <div class="leading-tight">
+          <p class="font-extrabold tracking-[.08em] text-ink">MARDIYANTO</p>
+          <p class="text-[10px] font-bold uppercase tracking-[.22em] text-gold">Human Resources</p>
+        </div>
+      </a>
+
+      <div class="hidden items-center gap-7 text-sm font-semibold text-slate-600 lg:flex">
+        <a class="nav-link hover:text-ink" href="#about">About</a>
+        <a class="nav-link hover:text-ink" href="#experience">Experience</a>
+        <a class="nav-link hover:text-ink" href="#projects">Projects</a>
+        <a class="nav-link hover:text-ink" href="#credentials">Credentials</a>
+        <a class="nav-link hover:text-ink" href="#bnsp-evidence">BNSP Evidence</a>
+        <a class="nav-link hover:text-ink" href="#skills">Skills</a>
+        <a class="nav-link hover:text-ink" href="#contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a href="https://wa.me/6281290744401" target="_blank" rel="noreferrer"
+           class="hidden rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-extrabold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-gold sm:inline-flex">
+          WhatsApp
+        </a>
+        <a href="https://drive.google.com/file/d/1YrMLHbpe6PyAdmNh7LF2KqhAghooqMvv/view?usp=sharing" target="_blank" rel="noreferrer"
+           class="rounded-full border border-gold/40 bg-white px-4 py-2.5 text-sm font-extrabold text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-gold">
+          Resume
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <!-- EDIT-HERO -->
+    <section id="home" class="hero-glow grain relative min-h-screen overflow-hidden pt-28">
+      <div class="absolute right-[-140px] top-[150px] h-[420px] w-[420px] rounded-full border border-gold/20"></div>
+      <div class="absolute right-[-70px] top-[220px] h-[280px] w-[280px] rounded-full border border-gold/15"></div>
+
+      <div class="relative mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-14 px-5 py-14 lg:grid-cols-[1.08fr_.92fr] lg:px-8">
+
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 rounded-full border border-gold/25 bg-white/75 px-4 py-2 text-xs font-extrabold uppercase tracking-[.18em] text-ink shadow-sm">
+            <span class="h-2 w-2 animate-pulse rounded-full bg-gold"></span>
+            Open to HR Opportunities
+          </div>
+
+          <p class="mt-7 text-sm font-extrabold uppercase tracking-[.28em] text-gold">Human Resources Portfolio</p>
+
+          <h1 class="mt-4 max-w-4xl font-serif text-[3.3rem] leading-[.98] tracking-tight text-ink sm:text-6xl lg:text-[5.2rem]">
+            People, process,
+            <span class="italic text-gold">and data</span>
+            — aligned for better work.
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-slate-600">
+            Human Resources Management graduate with experience in administration and operations,
+            strengthened by practical HR exposure in recruitment, HR administration, HRIS Gajihub,
+            manpower planning, talent management, and performance management.
+          </p>
+
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="#projects"
+               class="rounded-xl bg-ink px-6 py-3.5 font-extrabold text-white shadow-premium transition hover:-translate-y-1 hover:bg-ink2">
+              Explore HR Projects
+            </a>
+            <a href="https://drive.google.com/file/d/1YrMLHbpe6PyAdmNh7LF2KqhAghooqMvv/view?usp=sharing" target="_blank" rel="noreferrer"
+               class="rounded-xl border border-slate-300 bg-white px-6 py-3.5 font-extrabold text-ink transition hover:-translate-y-1 hover:border-gold hover:shadow-gold">
+              Download CV
+            </a>
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-medium text-slate-500">
+            <span>Bekasi, West Java</span>
+            <span class="hidden text-gold sm:inline">•</span>
+            <span>Willing to relocate</span>
+            <span class="hidden text-gold sm:inline">•</span>
+            <a class="font-bold text-ink hover:text-gold" href="https://wa.me/6281290744401" target="_blank" rel="noreferrer">WhatsApp ↗</a>
+            <span class="hidden text-gold sm:inline">•</span>
+            <a class="font-bold text-ink hover:text-gold" href="https://linkedin.com/in/mardiyanto95" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- EDIT-PHOTO -->
+        <div class="reveal relative mx-auto w-full max-w-[510px]">
+          <div class="absolute -left-5 -top-5 h-full w-full rounded-[2rem] border border-gold/35"></div>
+          <div class="absolute -bottom-5 -right-5 h-full w-full rounded-[2rem] bg-ink"></div>
+
+          <div class="relative overflow-hidden rounded-[2rem] border border-white bg-white p-2 shadow-premium">
+            <img src="assets/profile-photo.jpg"
+                 alt="Mardiyanto professional profile portrait"
+                 class="h-[610px] w-full rounded-[1.65rem] object-cover object-center sm:h-[650px]" />
+          </div>
+
+          <div class="absolute -left-5 bottom-8 max-w-[245px] rounded-2xl border border-white/80 bg-white/95 p-4 shadow-card backdrop-blur">
+            <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Target Roles</p>
+            <p class="mt-1.5 font-extrabold leading-6 text-ink">HR Staff · HR Officer · Junior HR Generalist</p>
+          </div>
+
+          <div class="absolute -right-4 top-8 rounded-2xl border border-white/80 bg-white/95 px-4 py-3 shadow-card backdrop-blur">
+            <p class="text-2xl font-extrabold text-ink">3.88</p>
+            <p class="text-xs font-bold text-slate-500">GPA / 4.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="border-y border-slate-200 bg-white">
+      <div class="mx-auto grid max-w-7xl divide-y divide-slate-200 px-5 md:grid-cols-4 md:divide-x md:divide-y-0 lg:px-8">
+        <div class="py-7 text-center">
+          <p class="text-2xl font-extrabold text-ink">BNSP</p>
+          <p class="mt-1 text-xs font-bold uppercase tracking-[.14em] text-slate-400">HR Staff Certified</p>
+        </div>
+        <div class="py-7 text-center">
+          <p class="text-2xl font-extrabold text-ink">3</p>
+          <p class="mt-1 text-xs font-bold uppercase tracking-[.14em] text-slate-400">HR Case Projects</p>
+        </div>
+        <div class="py-7 text-center">
+          <p class="text-2xl font-extrabold text-ink">HRIS</p>
+          <p class="mt-1 text-xs font-bold uppercase tracking-[.14em] text-slate-400">Gajihub</p>
+        </div>
+        <div class="py-7 text-center">
+          <p class="text-2xl font-extrabold text-ink">10</p>
+          <p class="mt-1 text-xs font-bold uppercase tracking-[.14em] text-slate-400">Team Members Led</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <!-- EDIT-ABOUT -->
+    <section id="about" class="py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.8fr_1.2fr] lg:px-8">
+        <div class="reveal">
+          <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold">About Me</p>
+          <h2 class="mt-4 max-w-md font-serif text-5xl leading-[1.05] text-ink">
+            A practical HR foundation built from real operational experience.
+          </h2>
+        </div>
+
+        <div class="reveal grid gap-6 md:grid-cols-2">
+          <div class="rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <p class="text-sm font-extrabold uppercase tracking-[.16em] text-gold">What I Bring</p>
+            <p class="mt-4 leading-8 text-slate-600">
+              Administrative discipline, documentation accuracy, KPI monitoring, team coordination,
+              coaching, attendance administration, SOP development, and data-oriented problem solving.
+            </p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-ink p-7 text-white shadow-premium">
+            <p class="text-sm font-extrabold uppercase tracking-[.16em] text-gold2">Where I’m Going</p>
+            <p class="mt-4 leading-8 text-slate-300">
+              Building a long-term career in Human Resources with a focus on structured HR operations,
+              recruitment support, employee data management, and people development.
+            </p>
+          </div>
+
+          <div class="md:col-span-2 rounded-3xl border border-gold/20 bg-ivory p-7">
+            <p class="font-semibold leading-8 text-slate-700">
+              My previous roles across administration, sales support, customer service, and team supervision
+              developed transferable capabilities that support HR work — from process discipline and reporting
+              to communication, leadership, and performance follow-up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <!-- EDIT-EXPERIENCE -->
+    <section id="experience" class="bg-white py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold">Professional Experience</p>
+            <h2 class="mt-3 font-serif text-5xl text-ink">Experience with measurable outcomes.</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-slate-500">
+            Selected accomplishments are highlighted to show process improvement,
+            leadership, administrative accuracy, and performance orientation.
+          </p>
+        </div>
+
+        <div class="mt-14 space-y-6">
+
+          <article class="premium-card reveal grid gap-8 rounded-[2rem] border border-slate-200 bg-paper p-7 shadow-card lg:grid-cols-[.35fr_1fr] lg:p-9">
+            <div>
+              <p class="text-sm font-extrabold uppercase tracking-[.14em] text-gold">2023 — 2025</p>
+              <h3 class="mt-3 text-2xl font-extrabold text-ink">Pasific Mitra Indo</h3>
+              <p class="mt-1 text-sm font-semibold text-slate-500">Administration & Operations Staff</p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl bg-white p-5">
+                <p class="text-3xl font-extrabold text-ink">25%</p>
+                <p class="mt-1 text-sm leading-6 text-slate-500">Improved team packaging efficiency through end-to-end operational SOP implementation.</p>
+              </div>
+              <div class="rounded-2xl bg-white p-5">
+                <p class="text-3xl font-extrabold text-ink">4.8/5</p>
+                <p class="mt-1 text-sm leading-6 text-slate-500">Maintained consistent store satisfaction while supporting daily service operations.</p>
+              </div>
+              <div class="rounded-2xl bg-white p-5">
+                <p class="text-3xl font-extrabold text-ink">15–20%</p>
+                <p class="mt-1 text-sm leading-6 text-slate-500">Supported monthly sales uplift through structured promotional programs.</p>
+              </div>
+              <div class="rounded-2xl bg-white p-5">
+                <p class="text-lg font-extrabold text-ink">KPI · Coaching · Data</p>
+                <p class="mt-1 text-sm leading-6 text-slate-500">Established daily KPI monitoring, coached team members, and verified operational records.</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="grid gap-6 lg:grid-cols-3">
+            <article class="premium-card reveal rounded-3xl border border-slate-200 bg-paper p-7">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">2022 — 2023</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">PT Electronics City Indonesia Tbk</h3>
+              <p class="mt-1 text-sm font-semibold text-slate-500">Direct Sales Administration Intern</p>
+              <div class="gold-line my-5"></div>
+              <ul class="space-y-3 text-sm leading-6 text-slate-600">
+                <li>Prepared 10–15 Delivery Order reports per day using SAP and Microsoft Excel.</li>
+                <li>Monitored receivables and periodic payment reminders.</li>
+                <li>Managed 200+ contract and payment files, improving retrieval efficiency by about 30%.</li>
+              </ul>
+            </article>
+
+            <article class="premium-card reveal rounded-3xl border border-slate-200 bg-paper p-7">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">2017 — 2022</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">PT Accentuates</h3>
+              <p class="mt-1 text-sm font-semibold text-slate-500">HP Experience Consultant</p>
+              <div class="gold-line my-5"></div>
+              <ul class="space-y-3 text-sm leading-6 text-slate-600">
+                <li>Consistently achieved 100–105% of monthly individual sales KPI.</li>
+                <li>Received Best Employee Award — Q1 2019.</li>
+                <li>Prepared daily, weekly, and monthly performance reports.</li>
+              </ul>
+            </article>
+
+            <article class="premium-card reveal rounded-3xl border border-slate-200 bg-paper p-7">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">2015 — 2017</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">PT Adicipta Boga Intiprima</h3>
+              <p class="mt-1 text-sm font-semibold text-slate-500">Assistant Outlet Supervisor</p>
+              <div class="gold-line my-5"></div>
+              <ul class="space-y-3 text-sm leading-6 text-slate-600">
+                <li>Supervised and coordinated a team of 10 employees.</li>
+                <li>Managed shifts, task allocation, and weekly performance evaluation.</li>
+                <li>Handled attendance records and outlet administration.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <!-- EDIT-PROJECTS -->
+    <section id="projects" class="relative overflow-hidden bg-ink py-28 text-white">
+      <div class="absolute -left-40 top-16 h-80 w-80 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold2">Selected HR Work</p>
+          <h2 class="mt-4 font-serif text-5xl leading-tight">Case studies that demonstrate practical HR thinking.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-300">
+            Each case study can be opened directly from the project image or the button below.
+          </p>
+        </div>
+
+        <div class="mt-14 space-y-8">
+
+          <!-- PROJECT 1 -->
+          <article class="reveal grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 lg:grid-cols-[.95fr_1.05fr]">
+            <a href="https://drive.google.com/file/d/1LfcAUeTBwnmZjQ1Sx58CLWNhzZqwz97D/view?usp=drive_link" target="_blank" rel="noreferrer" class="group overflow-hidden bg-white">
+              <img src="assets/talent-cover.jpg" alt="Talent Management and Manpower Planning project cover"
+                   class="h-full min-h-[310px] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+            </a>
+            <div class="p-8 lg:p-10">
+              <p class="text-xs font-extrabold uppercase tracking-[.2em] text-gold2">Case Study 01</p>
+              <h3 class="mt-3 text-3xl font-extrabold">Talent Management & Manpower Planning</h3>
+              <p class="mt-5 leading-8 text-slate-300">
+                Developed workforce and talent strategies through workforce analysis, workload analysis,
+                manpower gap analysis, headcount planning, talent acquisition, employer branding,
+                talent pools, career paths, learning & development, and succession planning.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Workforce Analysis</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Headcount Planning</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Talent Pool</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Succession Planning</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1LfcAUeTBwnmZjQ1Sx58CLWNhzZqwz97D/view?usp=drive_link" target="_blank" rel="noreferrer"
+                 class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gold px-5 py-3 font-extrabold text-ink transition hover:-translate-y-0.5 hover:bg-gold2">
+                View Study Case ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="reveal grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 lg:grid-cols-[1.05fr_.95fr]">
+            <div class="order-2 p-8 lg:order-1 lg:p-10">
+              <p class="text-xs font-extrabold uppercase tracking-[.2em] text-gold2">Case Study 02</p>
+              <h3 class="mt-3 text-3xl font-extrabold">Recruitment Process</h3>
+              <p class="mt-5 leading-8 text-slate-300">
+                Designed an end-to-end recruitment workflow covering Job Description and Job Specification,
+                CV screening, candidate sourcing, LinkedIn headhunting, candidate assessment,
+                hiring recommendation, and offering letter preparation.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">CV Screening</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Candidate Sourcing</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">LinkedIn Headhunting</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">Offering Letter</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1pXFUgsJ4Kq6BEF00o8p95N-HOA8qkFLm/view?usp=drive_link" target="_blank" rel="noreferrer"
+                 class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gold px-5 py-3 font-extrabold text-ink transition hover:-translate-y-0.5 hover:bg-gold2">
+                View Study Case ↗
+              </a>
+            </div>
+            <a href="https://drive.google.com/file/d/1pXFUgsJ4Kq6BEF00o8p95N-HOA8qkFLm/view?usp=drive_link" target="_blank" rel="noreferrer" class="group order-1 overflow-hidden bg-white lg:order-2">
+              <img src="assets/recruitment-cover.jpg" alt="Recruitment Process project cover"
+                   class="h-full min-h-[310px] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+            </a>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="reveal grid overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 lg:grid-cols-[.95fr_1.05fr]">
+            <a href="https://drive.google.com/file/d/1K6xjcEmARdeiBbMOMuNAZ0zf4vdatydl/view?usp=drive_link" target="_blank" rel="noreferrer" class="group overflow-hidden bg-white">
+              <img src="assets/performance-cover.jpg" alt="Performance Management project cover"
+                   class="h-full min-h-[310px] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+            </a>
+            <div class="p-8 lg:p-10">
+              <p class="text-xs font-extrabold uppercase tracking-[.2em] text-gold2">Case Study 03</p>
+              <h3 class="mt-3 text-3xl font-extrabold">Performance Management</h3>
+              <p class="mt-5 leading-8 text-slate-300">
+                Designed a performance-management case using Cascading Goals, SMART Goals, KPI/OKR,
+                Individual Performance Plan, Management by Objectives (MBO), 360° Feedback,
+                and 9-Box Talent Grid / HAV Mapping with development action plans.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">KPI / OKR</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">MBO</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">360° Feedback</span>
+                <span class="rounded-full border border-white/10 bg-white/10 px-3 py-1.5 text-xs">9-Box Grid</span>
+              </div>
+              <a href="https://drive.google.com/file/d/1K6xjcEmARdeiBbMOMuNAZ0zf4vdatydl/view?usp=drive_link" target="_blank" rel="noreferrer"
+                 class="mt-8 inline-flex items-center gap-2 rounded-xl bg-gold px-5 py-3 font-extrabold text-ink transition hover:-translate-y-0.5 hover:bg-gold2">
+                View Study Case ↗
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS -->
+    <!-- EDIT-CREDENTIALS -->
+    <section id="credentials" class="py-28">
+      <div class="mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal max-w-3xl">
+          <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold">Verified Credentials</p>
+          <h2 class="mt-4 font-serif text-5xl leading-tight text-ink">Training backed by visible evidence.</h2>
+          <p class="mt-5 text-lg leading-8 text-slate-600">
+            Certificates below can be opened directly. The ongoing HR Bootcamp is presented separately,
+            with current project outputs shown as evidence of learning.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+
+          <article class="premium-card reveal overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card">
+            <a href="https://drive.google.com/file/d/17xufunPSAeqP-V7Tk_naaufv8ajnMMe2/view?usp=drive_link" target="_blank" rel="noreferrer" class="group block bg-ivory p-4">
+              <img src="assets/bnsp-certificate.jpg" alt="BNSP HR Staff certificate preview"
+                   class="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.02]" />
+            </a>
+            <div class="p-6">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Certification · 2024</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">BNSP Human Resources Staff</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-500">
+                Human Resources Management competency certification with HR Staff qualification,
+                supported by six practical competency work samples available below.
+              </p>
+              <a href="#bnsp-evidence" class="mt-3 inline-flex text-sm font-extrabold text-gold hover:text-ink">
+                View Competency Evidence ↓
+              </a>
+              <a href="https://drive.google.com/file/d/17xufunPSAeqP-V7Tk_naaufv8ajnMMe2/view?usp=drive_link" target="_blank" rel="noreferrer"
+                 class="mt-5 inline-flex font-extrabold text-ink hover:text-gold">View Certificate ↗</a>
+            </div>
+          </article>
+
+          <article class="premium-card reveal overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card">
+            <a href="https://drive.google.com/file/d/1Fz-x-JKEYjpKxUzNJeCfgnttGmcqGl6V/view?usp=sharing" target="_blank" rel="noreferrer" class="group block bg-ivory p-4">
+              <img src="assets/hr-generalist-certificate.jpg" alt="HR Generalist training certificate preview"
+                   class="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.02]" />
+            </a>
+            <div class="p-6">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">E-Training · Jul 2025</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">Kelas Siap Jadi HR Generalist</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-500">
+                HR Management, HR Administration, Recruitment, Labor Law, Performance Management,
+                People Development, and People Analytics.
+              </p>
+              <a href="https://drive.google.com/file/d/1Fz-x-JKEYjpKxUzNJeCfgnttGmcqGl6V/view?usp=sharing" target="_blank" rel="noreferrer"
+                 class="mt-5 inline-flex font-extrabold text-ink hover:text-gold">View Certificate ↗</a>
+            </div>
+          </article>
+
+          <article class="premium-card reveal overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card">
+            <a href="https://drive.google.com/file/d/1HehBE9IjR4-uj_SkYFQh6S5nRQEMb2Hz/view?usp=drive_link" target="_blank" rel="noreferrer" class="group block bg-ivory p-4">
+              <img src="assets/payroll-tax-certificate.jpg" alt="Payroll and Tax training certificate preview"
+                   class="h-64 w-full object-contain transition duration-300 group-hover:scale-[1.02]" />
+            </a>
+            <div class="p-6">
+              <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">E-Training · Aug 2025</p>
+              <h3 class="mt-3 text-xl font-extrabold text-ink">Kelas HR: Payroll & Tax</h3>
+              <p class="mt-2 text-sm leading-6 text-slate-500">
+                Professional training supporting payroll administration and PPh Article 21 calculation knowledge.
+              </p>
+              <a href="https://drive.google.com/file/d/1HehBE9IjR4-uj_SkYFQh6S5nRQEMb2Hz/view?usp=drive_link" target="_blank" rel="noreferrer"
+                 class="mt-5 inline-flex font-extrabold text-ink hover:text-gold">View Certificate ↗</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- ONGOING BOOTCAMP -->
+        <div class="reveal mt-8 grid gap-6 rounded-[2rem] border border-gold/20 bg-ivory p-8 lg:grid-cols-[.75fr_1.25fr] lg:p-10">
+          <div>
+            <span class="rounded-full bg-ink px-3 py-1.5 text-xs font-extrabold uppercase tracking-[.14em] text-white">Ongoing</span>
+            <h3 class="mt-5 font-serif text-4xl text-ink">Human Resources Bootcamp</h3>
+            <p class="mt-2 font-extrabold text-gold">Tempat Belajar · Expected Sep 2026</p>
+          </div>
+          <div>
+            <p class="leading-8 text-slate-600">
+              Practical learning across Recruitment & Selection, Talent Management, HR Administration,
+              HRIS, Performance Management, Compensation & Benefits (Payroll), People Development,
+              Employer Branding, Company Culture, Industrial Relations, People Analytics, and AI for HR.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="#projects" class="rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white hover:bg-ink2">
+                View Bootcamp Projects
+              </a>
+              <span class="rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-500">
+                Certificate pending completion
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BNSP COMPETENCY EVIDENCE -->
+    <!-- EDIT-BNSP-EVIDENCE -->
+    <section id="bnsp-evidence" class="relative overflow-hidden bg-ivory py-28">
+      <div class="absolute -left-32 top-8 h-72 w-72 rounded-full bg-gold/10 blur-3xl"></div>
+      <div class="absolute -right-32 bottom-8 h-72 w-72 rounded-full bg-blue-500/5 blur-3xl"></div>
+
+      <div class="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div class="reveal grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold">BNSP Competency Evidence</p>
+            <h2 class="mt-4 font-serif text-5xl leading-tight text-ink">
+              Practical work samples supporting my HR Staff competencies.
+            </h2>
+          </div>
+          <div>
+            <p class="text-lg leading-8 text-slate-600">
+              These Excel work samples were prepared as competency evidence in the Human Resources Staff
+              competency process. They demonstrate practical capability in job analysis, wage administration,
+              social-security administration, payroll, and recruitment administration.
+            </p>
+            <p class="mt-3 text-sm leading-6 text-slate-500">
+              Each card links to the original Excel workbook so the work can be reviewed directly.
+              The files are presented as competency work samples rather than claims of implementation at a specific employer.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-2">
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">01</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Job Analysis & Job Description</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Preparing Job Descriptions</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Developed a job analysis and Job Description for an Admin Direct Sales role,
+                  covering job summary, education and experience requirements, hard/soft competencies,
+                  workload analysis, key duties, work outputs, authority, and KPI.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Job Analysis</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Job Description</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Workload Analysis</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">KPI</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1ghJSw4HKmkOlDwvOVIoi2g6GoUBXncXU/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">02</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Wage Administration</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Updating Employee Wage Data</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Prepared structured wage-update data using employee identity, employment reference,
+                  wage values, rapel/adjustments, payroll period, and company registration data.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Employee Data</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Wage Update</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Rapel</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1XkyBu4cMVT2YiOMxYHSfHqJqO6lP5Ckj/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">03</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Social Security Administration</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Registering New Workers</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Prepared structured new-worker registration data covering identity, contact information,
+                  employment status, work location, wages, employment start date, and supporting social-security fields.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Worker Registration</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">BPJS Administration</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Employee Master Data</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1YfKMHu0W6l5PP-7nBq4X2U1JMsPUfaof/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">04</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Social Security Administration</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Deactivating Worker Participation</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Prepared non-active worker data using KPJ, employee identity, dates, reason codes,
+                  and supporting notes for status changes such as resignation, termination, contract completion, and retirement.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">KPJ Data</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Deactivation</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Reason Codes</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1Dv2uL754oSD2_lB4qdmQOinQnJPUwBqO/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">05</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">Payroll Administration</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Administering Employee Payroll</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Built a payroll work sample containing a Payroll SOP and process flow, employee data,
+                  attendance, overtime, payroll calculations, deductions, BPJS-related components,
+                  PPh 21, take-home pay, and a sample payslip.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Payroll SOP</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Attendance & Overtime</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">PPh 21</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Payslip</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1Okw0qF1F1F2X7q4PxDpaC55GisAaKyY2/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+          <article class="premium-card reveal rounded-3xl border border-slate-200 bg-white p-7 shadow-card">
+            <div class="flex items-start gap-5">
+              <div class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink text-xl font-black text-gold2">06</div>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.16em] text-gold">HR Policy & Recruitment Administration</p>
+                <h3 class="mt-2 text-2xl font-extrabold text-ink">Administering Recruitment Policy</h3>
+                <p class="mt-3 leading-7 text-slate-600">
+                  Developed recruitment-administration documents including Recruitment & Selection SOP,
+                  manpower planning, offering letter, job posting, interview assessment form,
+                  employee appointment letter, and PKWTT employment agreement.
+                </p>
+                <div class="mt-5 flex flex-wrap gap-2">
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Recruitment SOP</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Manpower Planning</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Offering Letter</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">Interview Form</span>
+                  <span class="rounded-full bg-ivory px-3 py-1.5 text-xs font-bold">PKWTT</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://docs.google.com/spreadsheets/d/1m6GTrSguUp_tLWeDnVuWJGQx8-DZNgtK/edit?usp=drive_link&ouid=113280571227100251299&rtpof=true&sd=true" target="_blank" rel="noreferrer"
+               class="mt-6 inline-flex rounded-xl bg-ink px-5 py-3 text-sm font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-ink2">
+              Open Original File ↗
+            </a>
+          </article>
+
+        </div>
+
+        <div class="reveal mt-8 rounded-3xl bg-ink p-7 text-white shadow-premium lg:flex lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-extrabold uppercase tracking-[.18em] text-gold2">Competency Coverage</p>
+            <p class="mt-2 max-w-3xl leading-7 text-slate-300">
+              Job Description · Wage Administration · Social Security Administration · Payroll Administration ·
+              HR Policy Administration · Recruitment Administration
+            </p>
+          </div>
+          <a href="https://drive.google.com/file/d/17xufunPSAeqP-V7Tk_naaufv8ajnMMe2/view?usp=drive_link" target="_blank" rel="noreferrer"
+             class="mt-5 inline-flex rounded-xl bg-gold px-5 py-3 text-sm font-extrabold text-ink transition hover:bg-gold2 lg:mt-0">
+            View BNSP Certificate ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <!-- EDIT-SKILLS -->
+    <section id="skills" class="bg-white py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[.72fr_1.28fr] lg:px-8">
+        <div class="reveal">
+          <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold">Capabilities</p>
+          <h2 class="mt-4 font-serif text-5xl leading-tight text-ink">HR capability, administrative rigor, and data awareness.</h2>
+        </div>
+
+        <div class="reveal grid gap-5 sm:grid-cols-2">
+          <div class="rounded-3xl border border-slate-200 bg-paper p-6">
+            <p class="font-extrabold text-ink">Human Resources</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">End-to-End Recruitment</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">HR Administration</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Talent Management</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Manpower Planning</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Performance Management</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">KPI / OKR</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">BPJS Administration</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-paper p-6">
+            <p class="font-extrabold text-ink">Tools & Data</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Gajihub HRIS</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Microsoft Excel</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">VLOOKUP</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">PivotTable</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">SAP</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Google Workspace</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-paper p-6">
+            <p class="font-extrabold text-ink">Administration</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Data Entry & Verification</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Document Management</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Employee Data</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Reporting</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">SOP Development</span>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-paper p-6">
+            <p class="font-extrabold text-ink">Professional Strengths</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Communication</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Cross-Functional Coordination</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Coaching</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Problem Solving</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Team Leadership</span>
+              <span class="rounded-full bg-white px-3 py-2 text-xs font-bold">Attention to Detail</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="py-24">
+      <div class="mx-auto grid max-w-7xl gap-6 px-5 lg:grid-cols-[1.15fr_.85fr] lg:px-8">
+        <div class="reveal rounded-[2rem] border border-slate-200 bg-white p-8 shadow-card lg:p-10">
+          <p class="text-sm font-extrabold uppercase tracking-[.22em] text-gold">Education</p>
+          <h3 class="mt-4 font-serif text-4xl text-ink">Universitas Krisnadwipayana</h3>
+          <p class="mt-3 text-lg font-extrabold text-slate-700">Bachelor of Management — Human Resources Management Concentration</p>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm font-bold text-slate-500">
+            <span>Sep 2022 — May 2026</span>
+            <span class="text-gold">•</span>
+            <span>GPA 3.88 / 4.00</span>
+          </div>
+          <p class="mt-6 leading-8 text-slate-600">
+            Relevant coursework includes Human Resources Management, Performance Management,
+            Organizational Behavior, and Business Communication.
+          </p>
+        </div>
+
+        <div class="reveal rounded-[2rem] bg-ink p-8 text-white shadow-premium lg:p-10">
+          <p class="text-sm font-extrabold uppercase tracking-[.22em] text-gold2">Focus</p>
+          <h3 class="mt-4 font-serif text-4xl">Structured HR with a people-first mindset.</h3>
+          <p class="mt-5 leading-8 text-slate-300">
+            I aim to contribute through accurate HR administration, disciplined processes,
+            clear communication, and data-informed support for employees and organizational goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <!-- EDIT-CONTACT -->
+    <section id="contact" class="px-5 pb-16 pt-8 lg:px-8">
+      <div class="mx-auto max-w-7xl overflow-hidden rounded-[2.5rem] bg-ink px-7 py-14 text-white shadow-premium sm:px-10 lg:px-14 lg:py-16">
+        <div class="grid gap-10 lg:grid-cols-[1fr_.55fr] lg:items-end">
+          <div class="reveal">
+            <p class="text-sm font-extrabold uppercase tracking-[.24em] text-gold2">Let’s Connect</p>
+            <h2 class="mt-4 max-w-3xl font-serif text-5xl leading-tight">
+              Open to opportunities where structured HR work can make a meaningful difference.
+            </h2>
+            <p class="mt-5 max-w-2xl leading-8 text-slate-300">
+              Interested in HR Staff, HR Officer, and Junior HR Generalist roles.
+            </p>
+          </div>
+
+          <div class="reveal flex flex-col gap-3">
+            <a href="mailto:mardiyantomardiyanto07@gmail.com"
+               class="rounded-xl bg-gold px-5 py-3.5 text-center font-extrabold text-ink transition hover:bg-gold2">
+              Email Me
+            </a>
+            <a href="https://wa.me/6281290744401" target="_blank" rel="noreferrer"
+               class="rounded-xl border border-white/15 bg-white/5 px-5 py-3.5 text-center font-extrabold text-white transition hover:bg-white/10">
+              WhatsApp · +62 812-9074-4401 ↗
+            </a>
+            <a href="https://linkedin.com/in/mardiyanto95" target="_blank" rel="noreferrer"
+               class="rounded-xl border border-white/15 bg-white/5 px-5 py-3.5 text-center font-extrabold text-white transition hover:bg-white/10">
+              LinkedIn ↗
+            </a>
+            <a href="https://drive.google.com/file/d/1YrMLHbpe6PyAdmNh7LF2KqhAghooqMvv/view?usp=sharing" target="_blank" rel="noreferrer"
+               class="rounded-xl border border-white/15 bg-white/5 px-5 py-3.5 text-center font-extrabold text-white transition hover:bg-white/10">
+              Resume
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-12 border-t border-white/10 pt-7 text-sm text-slate-400">
+          <p>Bekasi, West Java · Willing to relocate ·
+            <a href="https://wa.me/6281290744401" target="_blank" rel="noreferrer" class="font-bold text-white hover:text-gold2">+62 812-9074-4401</a>
+          </p>
+          <p class="mt-1">mardiyantomardiyanto07@gmail.com</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pb-8 pt-2 text-center text-xs font-semibold text-slate-400">
+    © 2026 Mardiyanto · Human Resources Portfolio
+  </footer>
+
+  <!-- Subtle scroll reveal -->
+  <script>
+    const revealItems = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
+
+</body>
+</html>
